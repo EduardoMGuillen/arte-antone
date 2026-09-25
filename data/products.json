@@ -1,0 +1,112 @@
+[
+  {
+    "id": "tablero-hola-mundo",
+    "name": "Tablero “Hola Mundo” personalizado",
+    "description": "Tablero de nacimiento circular en MDF con el nombre de tu bebé en relieve, figura temática pintada a mano y espacio para fecha, hora, peso y medida. Incluye cordón para colgar. Ideal para la foto del hospital y para decorar su cuarto.",
+    "price": 650,
+    "image": "/images/productos/post-11.jpg",
+    "category": "Tableros",
+    "promo": false,
+    "active": true,
+    "createdAt": "2026-09-20T10:00:00.000Z"
+  },
+  {
+    "id": "recuerditos-mi-primer-anito",
+    "name": "Recuerditos “Mi 1er Añito”",
+    "description": "Figuritas de pie en MDF natural o pintadas: osito, elefantita, león, jirafa, conejita, nube, mariposa o arcoíris. Personalizados con nombre y fecha. Precio por unidad; pregunta por paquetes para cumpleaños, bautizos y eventos.",
+    "price": 85,
+    "image": "/images/productos/post-02.jpg",
+    "category": "Recuerditos",
+    "promo": true,
+    "active": true,
+    "createdAt": "2026-09-16T10:00:00.000Z"
+  },
+  {
+    "id": "nombre-flores-mariposas",
+    "name": "Nombre decorativo con flores y mariposas",
+    "description": "Letrero con el nombre en letra cursiva blanca sobre base de MDF con flores de cerezo y mariposas pintadas a mano. Perfecto para la puerta o la pared del cuarto de la bebé.",
+    "price": 550,
+    "image": "/images/productos/post-07.jpg",
+    "category": "Nombres",
+    "promo": false,
+    "active": true,
+    "createdAt": "2026-08-31T10:00:00.000Z"
+  },
+  {
+    "id": "nombre-conejita",
+    "name": "Nombre con conejita en relieve",
+    "description": "Placa con conejita asomándose, flores laterales y el nombre en relieve. Se entrega pintada en los colores que elijas para combinar con la decoración del cuarto.",
+    "price": 600,
+    "image": "/images/productos/post-04.jpg",
+    "category": "Nombres",
+    "promo": false,
+    "active": true,
+    "createdAt": "2026-09-04T10:00:00.000Z"
+  },
+  {
+    "id": "placa-mascota",
+    "name": "Placa personalizada para mascota",
+    "description": "De una foto… a un recuerdo único. Silueta de tu peludito grabada en MDF con su nombre en un huesito. Un detalle especial para su camita o la entrada de casa.",
+    "price": 450,
+    "image": "/images/productos/post-03.jpg",
+    "category": "Mascotas",
+    "promo": false,
+    "active": true,
+    "createdAt": "2026-09-09T10:00:00.000Z"
+  },
+  {
+    "id": "cuadro-mejor-abuelo",
+    "name": "Cuadro con foto “Tengo al mejor abuelo”",
+    "description": "Portarretrato en MDF grabado con frase personalizada y espacio para foto. Incluye base para mesa. Disponible para abuelo, abuela, papá, mamá, padrinos y tíos.",
+    "price": 480,
+    "image": "/images/productos/post-06.jpg",
+    "category": "Cuadros",
+    "promo": true,
+    "active": true,
+    "createdAt": "2026-09-03T10:00:00.000Z"
+  },
+  {
+    "id": "kit-dinosaurios",
+    "name": "Kit de dinosaurios para pintar",
+    "description": "Caja de regalo con 5 dinosaurios de MDF grabados, pinturas y pincel. El regalo perfecto para pintar y crear; también ideal como actividad en fiestas infantiles.",
+    "price": 380,
+    "image": "/images/productos/post-09.jpg",
+    "category": "Kits para pintar",
+    "promo": false,
+    "active": true,
+    "createdAt": "2026-08-16T10:00:00.000Z"
+  },
+  {
+    "id": "figura-para-pintar",
+    "name": "Figura individual para pintar",
+    "description": "Figura de MDF grabada con 6 pinturas y pincel. Elige entre dinosaurio, unicornio, carrito o mariposa. Un recuerdo divertido para los invitados de la fiesta.",
+    "price": 120,
+    "image": "/images/productos/post-05.jpg",
+    "category": "Kits para pintar",
+    "promo": false,
+    "active": true,
+    "createdAt": "2026-09-04T09:00:00.000Z"
+  },
+  {
+    "id": "recuerdito-numero-uno",
+    "name": "Recuerdito primer añito con nombre",
+    "description": "Topper / imán con el número 1, personaje a elección y nombre del cumpleañero. Se entrega empacado individualmente, listo para regalar a los invitados.",
+    "price": 70,
+    "image": "/images/productos/post-10.jpg",
+    "category": "Recuerditos",
+    "promo": false,
+    "active": true,
+    "createdAt": "2026-08-20T10:00:00.000Z"
+  },
+  {
+    "id": "medallon-baby-shower",
+    "name": "Medallón recuerdo de baby shower",
+    "description": "Medallón circular con nombre del bebé, frase de agradecimiento, fecha y figurita decorativa. Empaque individual. Precio por unidad, pedido mínimo 20 piezas.",
+    "price": 55,
+    "image": "/images/productos/post-12.jpg",
+    "category": "Recuerditos",
+    "promo": false,
+    "active": true,
+    "createdAt": "2026-08-18T10:00:00.000Z"
+  }
+]
