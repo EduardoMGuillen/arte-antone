@@ -62,7 +62,7 @@ export default function Hero() {
           >
             <div className="flex items-center gap-3">
               <div className="flex -space-x-3">
-                {["/images/productos/post-01.jpg", "/images/productos/post-12.jpg", "/images/productos/post-10.jpg"].map(
+                {["/images/catalogo/medallon-baby-shower.jpg", "/images/catalogo/nombre-conejita.jpg", "/images/catalogo/recuerdito-numero-uno.jpg"].map(
                   (src) => (
                     <span key={src} className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-white shadow">
                       <Image src={src} alt="" fill sizes="40px" className="object-cover" />
@@ -103,7 +103,7 @@ export default function Hero() {
             className="absolute left-1/2 top-6 z-10 h-[340px] w-[250px] -translate-x-1/2 overflow-hidden rounded-t-[140px] rounded-b-[28px] border-[6px] border-white shadow-2xl sm:h-[430px] sm:w-[310px]"
           >
             <Image
-              src="/images/productos/post-11-tall.jpg"
+              src="/images/catalogo/hero-nursery.jpg"
               alt="Tablero de nacimiento Hola Mundo soy Enzo"
               fill
               priority
@@ -119,7 +119,7 @@ export default function Hero() {
             className="absolute bottom-10 left-0 z-20 w-[150px] rounded-3xl bg-white p-2 shadow-xl sm:bottom-14 sm:w-[180px]"
           >
             <div className="relative aspect-square overflow-hidden rounded-2xl">
-              <Image src="/images/productos/post-07.jpg" alt="Nombre decorativo Emma" fill sizes="180px" className="object-cover" />
+              <Image src="/images/catalogo/nombre-flores-mariposas.jpg" alt="Nombre decorativo Emma" fill sizes="180px" className="object-cover" />
             </div>
             <p className="px-1 pb-1 pt-2 text-center text-xs font-bold text-ink">Nombres decorativos</p>
           </motion.div>
@@ -131,7 +131,7 @@ export default function Hero() {
             className="absolute right-0 top-[34%] z-20 w-[140px] rounded-3xl bg-white p-2 shadow-xl sm:w-[170px]"
           >
             <div className="relative aspect-square overflow-hidden rounded-2xl">
-              <Image src="/images/productos/post-02.jpg" alt="Recuerditos Mi primer añito" fill sizes="170px" className="object-cover" />
+              <Image src="/images/catalogo/recuerditos-mi-primer-anito.jpg" alt="Recuerditos Mi primer añito" fill sizes="170px" className="object-cover" />
             </div>
             <p className="px-1 pb-1 pt-2 text-center text-xs font-bold text-ink">Recuerditos</p>
           </motion.div>
