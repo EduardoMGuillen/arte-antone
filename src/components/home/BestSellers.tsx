@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import ProductCard from "@/components/store/ProductCard";
 import { Heart } from "@/components/Decor";
+import { CATEGORIES } from "@/lib/constants";
 import type { Product } from "@/lib/types";
 
 const TABS = [
@@ -14,19 +15,37 @@ const TABS = [
   { id: "promo", label: "Ofertas" },
 ] as const;
 
+const FILTERS = [{ id: "all", short: "Todo", tone: "bg-white" }, ...CATEGORIES];
+
 export default function BestSellers({ products }: { products: Product[] }) {
   const [tab, setTab] = useState<(typeof TABS)[number]["id"]>("top");
+  const [category, setCategory] = useState("all");
+
+  const counts = useMemo(
+    () =>
+      products.reduce<Record<string, number>>(
+        (acc, p) => {
+          acc[p.category] = (acc[p.category] ?? 0) + 1;
+          acc.all += 1;
+          return acc;
+        },
+        { all: 0 },
+      ),
+    [products],
+  );
 
   const list = useMemo(() => {
-    if (tab === "new") {
-      return [...products].sort((a, b) => b.createdAt.localeCompare(a.createdAt)).slice(0, 10);
-    }
-    if (tab === "promo") return products.filter((p) => p.promo).slice(0, 10);
-    return products.slice(0, 10);
-  }, [products, tab]);
+    let items = category === "all" ? products : products.filter((p) => p.category === category);
+    if (tab === "new") items = [...items].sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+    if (tab === "promo") items = items.filter((p) => p.promo);
+    return items.slice(0, 10);
+  }, [products, tab, category]);
+
+  const seeAllHref =
+    category === "all" ? "/productos" : `/productos?categoria=${encodeURIComponent(category)}`;
 
   return (
-    <section id="tienda" className="scroll-mt-28 bg-gradient-to-b from-paper to-cream/60 py-20 lg:py-24">
+    <section id="categorias" className="scroll-mt-28 bg-gradient-to-b from-paper to-cream/60 py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
@@ -58,7 +77,7 @@ export default function BestSellers({ products }: { products: Product[] }) {
               ))}
             </div>
             <Link
-              href="/productos"
+              href={seeAllHref}
               className="hidden items-center gap-1 text-sm font-bold text-brand-deep hover:underline sm:inline-flex"
             >
               Ver todo <ArrowRight className="h-4 w-4" />
@@ -66,7 +85,32 @@ export default function BestSellers({ products }: { products: Product[] }) {
           </div>
         </div>
 
-        <motion.div layout className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-5">
+        <div className="no-scrollbar -mx-4 mt-8 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0">
+          {FILTERS.map((c) => {
+            const active = category === c.id;
+            return (
+              <button
+                key={c.id}
+                type="button"
+                onClick={() => setCategory(c.id)}
+                className={`inline-flex shrink-0 items-center gap-2 rounded-full border px-4 py-2 text-sm font-bold transition ${
+                  active
+                    ? "border-brand bg-brand text-white shadow-md shadow-brand/25"
+                    : `border-transparent ${c.tone} text-ink/80 hover:-translate-y-0.5 hover:text-ink`
+                }`}
+              >
+                {c.short}
+                <span
+                  className={`rounded-full px-1.5 text-[11px] ${active ? "bg-white/25 text-white" : "bg-white/70 text-muted"}`}
+                >
+                  {counts[c.id] ?? 0}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        <motion.div layout className="mt-8 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-5">
           <AnimatePresence mode="popLayout">
             {list.map((p, i) => (
               <motion.div
@@ -83,11 +127,13 @@ export default function BestSellers({ products }: { products: Product[] }) {
           </AnimatePresence>
         </motion.div>
         {list.length === 0 && (
-          <p className="mt-10 text-center text-sm text-muted">Pronto tendremos nuevas ofertas ✨</p>
+          <p className="mt-10 text-center text-sm text-muted">
+            {tab === "promo" ? "Pronto tendremos nuevas ofertas ✨" : "Pronto agregaremos más diseños ✨"}
+          </p>
         )}
 
         <div className="mt-10 flex justify-center sm:hidden">
-          <Link href="/productos" className="btn-ghost">
+          <Link href={seeAllHref} className="btn-ghost">
             Ver todos los productos <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
