@@ -7,7 +7,6 @@ import About from "@/components/home/About";
 import HowItWorks from "@/components/home/HowItWorks";
 import Testimonials from "@/components/home/Testimonials";
 import InstagramFeed from "@/components/home/InstagramFeed";
-import Faq from "@/components/home/Faq";
 import Newsletter from "@/components/home/Newsletter";
 import Location from "@/components/home/Location";
 import { getProducts } from "@/lib/products";
@@ -34,7 +33,6 @@ export default async function Home() {
         <HowItWorks />
         <Testimonials />
         <InstagramFeed />
-        <Faq />
         <Newsletter />
         <Location />
       </main>

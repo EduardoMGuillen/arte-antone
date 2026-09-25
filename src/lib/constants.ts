@@ -58,6 +58,7 @@ export const NAV_LINKS = [
   { href: "/productos?orden=nuevos", label: "Novedades" },
   { href: "/productos?promo=1", label: "Ofertas" },
   { href: "/#nosotros", label: "Nosotros" },
+  { href: "/preguntas-frecuentes", label: "Preguntas" },
   { href: "/contacto", label: "Contacto" },
 ] as const;
 

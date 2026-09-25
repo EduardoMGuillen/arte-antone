@@ -72,8 +72,8 @@ export default function Footer() {
           <p className="font-display text-lg font-semibold text-white">Ayuda</p>
           <ul className="mt-4 space-y-2.5 text-sm">
             <li><Link href="/#como-funciona" className="hover:text-sand">¿Cómo hago mi pedido?</Link></li>
-            <li><Link href="/#faq" className="hover:text-sand">Preguntas frecuentes</Link></li>
-            <li><Link href="/#ubicacion" className="hover:text-sand">Envíos y entregas</Link></li>
+            <li><Link href="/preguntas-frecuentes" className="hover:text-sand">Preguntas frecuentes</Link></li>
+            <li><Link href="/preguntas-frecuentes" className="hover:text-sand">Envíos y entregas</Link></li>
             <li><Link href="/contacto" className="hover:text-sand">Pedidos para eventos</Link></li>
             <li><Link href="/#nosotros" className="hover:text-sand">Nuestra historia</Link></li>
             <li><Link href="/contacto" className="hover:text-sand">Contacto</Link></li>
